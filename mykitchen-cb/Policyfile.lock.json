@@ -1,0 +1,42 @@
+{
+  "revision_id": "087d8ebe30a221d03cfe29c623b58f25f5088d68e0cf55dea80cba0d1b54e9c0",
+  "name": "mykitchen-cb",
+  "run_list": [
+    "recipe[mykitchen-cb::install-apache]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "mykitchen-cb": {
+      "version": "0.1.0",
+      "identifier": "dcc5fb1539be624c27fe429636fc1b351f5391f6",
+      "dotted_decimal_identifier": "62142177059913314.21436071222327036.29914972787190",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": null,
+      "source_options": {
+        "path": "."
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "mykitchen-cb",
+        ">= 0.0.0"
+      ]
+    ],
+    "dependencies": {
+      "mykitchen-cb (0.1.0)": [
+
+      ]
+    }
+  }
+}

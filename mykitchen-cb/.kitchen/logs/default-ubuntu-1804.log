@@ -1,0 +1,3 @@
+I, [2022-02-04T02:45:38.169557 #3918]  INFO -- default-ubuntu-1804: -----> Destroying <default-ubuntu-1804>...
+I, [2022-02-04T02:45:38.337127 #3918]  INFO -- default-ubuntu-1804: EC2 instance <i-01d3df686737faaf0> destroyed.
+I, [2022-02-04T02:45:38.337822 #3918]  INFO -- default-ubuntu-1804: Finished destroying <default-ubuntu-1804> (0m0.17s).

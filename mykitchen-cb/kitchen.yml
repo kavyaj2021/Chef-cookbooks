@@ -1,0 +1,31 @@
+---
+driver:
+  name: ec2
+  aws_ssh_key_id: Virginia
+  security_group_ids: ["sg-09aa1894378b1a0c6"]
+  region: us-east-1
+  availability_zone: a
+  require_chef_omnibus: true
+  subnet_id: subnet-06833be2c9f286178
+  instance_type: m4.large
+  associate_public_ip: true
+provisioner:
+   name: chef_zero
+platforms:
+  - name: ubuntu-18.04
+    driver:
+      image_id: ami-0e472ba40eb589f49
+    block_device_mappings:
+      - device_name: /dev/sda1
+        ebs:
+          volume_size: 50
+          delete_on_termination: true
+    transport:
+      ssh_key: /root/Virginia.pem
+      connection_timeout: 300
+      connection_retries: 5
+      username: ubuntu
+suites:
+  - name: default
+    run_list:
+      - recipe[mykitchen-cb::install_apache]
